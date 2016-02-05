@@ -25,7 +25,7 @@ cacheSolve <- function(x, ...) {
         inv<-x$getinv()
 
 	if(!is.matrix(inv)){
-		inv<-solve(x$get())
+		inv<-solve(x$get(), ...)
 		x$setinv(inv)}
 	else {
 		print("Inverse from Cache")}
